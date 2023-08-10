@@ -5,9 +5,7 @@ import FlexBetween from '@/components/FlexBetween'
 
 import PixIcon from "@mui/icons-material/Pix"
 
-type Props = {}
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const {palette} = useTheme();
   const [selected, setSelected] = useState("dashboard")
   return (
@@ -23,7 +21,7 @@ const Navbar = (props: Props) => {
         <Link to="/" onClick={() => setSelected("dashboard")} style={{ color: selected === "dashboard" ? "inherit" : palette.grey[700], textDecoration: "inherit"}} >Dash board</Link>
       </Box>
       <Box sx={{"&:hover": {color: palette.primary[100]}}}>
-        <Link to="/" onClick={() => setSelected("predictions")} style={{ color: selected === "predictions" ? "inherit" : palette.grey[700],textDecoration: "inherit" }} >Predictions</Link>
+        <Link to="/predictions" onClick={() => setSelected("predictions")} style={{ color: selected === "predictions" ? "inherit" : palette.grey[700],textDecoration: "inherit" }} >Predictions</Link>
       </Box>
     </FlexBetween>
   </FlexBetween>

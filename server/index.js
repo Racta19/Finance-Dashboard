@@ -34,8 +34,7 @@ app.use("/transaction",transactionRoutes);
 /*PORT= 1337*/
 
 const PORT = process.env.PORT || 9000;
-const uri = "mongodb+srv://rohailomer14:2RlfeDHdlwCkzTVS@dummyfinanceappcluester.3bpl0sw.mongodb.net/?retryWrites=true&w=majority"
-mongoose.connect(uri, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
